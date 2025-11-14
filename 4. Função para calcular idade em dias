@@ -1,0 +1,10 @@
+from datetime import date
+
+def idade_em_dias(ano_nascimento: int) -> int:
+    ano_atual = date.today().year
+    idade_anos = ano_atual - ano_nascimento
+    idade_dias = idade_anos * 365  # cálculo aproximado (sem considerar anos bissextos)
+    return idade_dias
+
+# Exemplo de uso:
+print(f"Idade em dias: {idade_em_dias(1990)} dias")
